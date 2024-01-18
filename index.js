@@ -33,11 +33,13 @@ function init({
   let batch = [];
   const client = algoliasearch(algoliaConfig.appId, algoliaConfig.apiKey);
   const index = client.initIndex(algoliaConfig.indexName);
+  const filename = algoliaConfig.fileName || 'sitemap-index';
   const sitemaps = [];
 
   const handleSitemap = async entries =>
     sitemaps.push({
       loc: `${sitemapLoc}/${await saveSiteMap({
+        filename,
         sitemap: createSitemap(entries),
         index: sitemaps.length,
         root: outputFolder,
