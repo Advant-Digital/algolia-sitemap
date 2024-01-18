@@ -91,7 +91,7 @@ function init({
     await saveSiteMap({
       sitemap: sitemapIndex,
       root: outputFolder,
-      filename: 'sitemap-index',
+      filename: `${algoliaConfig.fileName}-sitemap-index`,
     });
   };
 
