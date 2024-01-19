@@ -33,6 +33,7 @@ algoliaSitemap({
   sitemapLoc: 'https://yoursite.com/sitemaps',
   outputFolder: 'sitemaps',
   hitToParams,
+  fileName: 'your-custom-file-name' // (optional) will be used for naming the generated sitemap files, allows you to loop through several indexes without having your sitemaps being overwritten
 });
 ```
 
